@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Store Books</title>
+	<title>Loja de Livros</title>
 	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	<%= csrf_meta_tags %>
 </head>
 <body class="<%= controller.controller_name %>">
 	<div id="Logotipo">
-		<%= image_tag("logo.png") %>
-		<%= @page_title || "Store Books" %>
+		<%= image_tag("Logo.gif") %>
+		<%= @page_title || "Loja de Livros" %>
 	</div>
 	<div id="Menu">
 		<header>
 		<nav>
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><%= link_to 'Products', products_path %></li>				
+				<li><%= link_to 'Loja', store_path %></li>
+				<li><%= link_to 'Produtos', products_path %></li>				
 				<li><a href="#">Informações</a></li>
 				<li><a href="#">Duvidas</a></li>
 			</ul>

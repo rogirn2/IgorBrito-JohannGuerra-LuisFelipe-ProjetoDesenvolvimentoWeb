@@ -12,11 +12,11 @@
     <% @products.each do |product| %>
       <tr>
         <td class="titulo">
-			<img src="<%= product.image_url %>">
+			<img src<%= image_tag(product.image_url, class: 'list_image') %>
 			<br/>
 			<%= product.title %>
 		</td>
-        <td class="descricao"><%= product.description %></td>
+        <td class="descricao"><%= truncate(strip_tags(product.description), length: 80) %></td>
         <td class="preco"><%= product.price %></td>
         <td class="editar">
 			<p><%= link_to 'Show', product %></p>
@@ -28,4 +28,4 @@
   </tbody>
 </table>
 <br>
-<div id="new_product"><%= link_to 'New Product', new_product_path %></div>
+<div id="new_product"><%= link_to 'Novo Produto', new_product_path %></div>
