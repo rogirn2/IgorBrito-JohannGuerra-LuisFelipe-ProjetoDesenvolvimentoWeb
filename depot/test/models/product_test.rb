@@ -52,4 +52,17 @@ class ProductTest < ActiveSupport::TestCase
 		assert product.invalid?
 		assert_equal ["has already been taken"], product.errors[:title]
 	end
+	
+	test "product is not valid without a title of at least 10 characters" do
+    product = Product.new(title: "Rails 101",
+              description: "blah blah",
+              price: 0.01,
+              image_url: "fred.gif")
+    
+    assert product.invalid?
+    assert_equal I18n.translate('errors.messages.too_short')
+                                
+    product.title = "Product title is valid" 
+    assert product.valid?
+  end
 end

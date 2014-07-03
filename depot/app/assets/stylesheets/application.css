@@ -41,6 +41,7 @@
 	 margin-bottom: 2em;
 	 background-color: #f0f0f0;
 	 font: bold smaller sans-serif;
+	 
  }
 
 #Conteudo {
@@ -106,7 +107,7 @@ footer{
 	position: relative;
 	clear: both;
 	background-color: #E0FFFF;
-	width: 1280px;
+	width: 1260px;
 	text-align: center;
 	padding: 11px;
 	border-bottom: 2px solid #282;
