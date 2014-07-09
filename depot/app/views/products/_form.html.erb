@@ -27,6 +27,10 @@
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
+  <div class="field">
+	<%= f.label :category %><br>
+	<%= f.select :category, [['Biografia','Biografia'],['Conto','Conto'],['Ensaio','Ensaio'],['Ficção Cientifica','Ficção'],['Humor','Humor'],['Literatura Estrangeira','Estrangeiro'],['Poesia','Poesia'],['Policial','Policial'],['Romance','Romance'],['Terror','Terror'],['Mangá','Mangá'],['Quadrinhos','Quadrinhos'],['Outros','Outros']] %>
+ </div>
   <div class="actions">
     <%= f.submit %>
   </div>

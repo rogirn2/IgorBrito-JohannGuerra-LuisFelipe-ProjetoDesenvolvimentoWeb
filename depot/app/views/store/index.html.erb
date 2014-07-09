@@ -2,16 +2,62 @@
 	<p id="notice"><%= notice %></p>
 <% end %>
 <h1>Catálogo</h1>
-	<% @products.each do |product| %>
-		<% cache ['store', Product.latest] do %>
-			<div class="item">
-				<div class="imagem"><%= image_tag(product.image_url) %></div>
-				<h3><%= product.title %></h3>
-				<%= sanitize(product.description) %>
-					<div class="price_item">
-						<span class="price"><%= number_to_currency(product.price) %></span>
-						<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+
+	<div class="titulo"><h2>Romance</h2></div>
+	<div class="produtos">		
+		<% @products.each do |product| %>
+			<% if product.category=='Romance' %>
+				<% cache ['store', Product.latest] do %>
+					<div class="item">
+						<div class="imagem"><%= image_tag(product.image_url) %></div>
+						<h3><%= product.title %></h3>
+						<%= sanitize(product.description) %>
+							<div class="price_item">
+								<span class="price"><%= number_to_currency(product.price) %></span>
+								<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+							</div>
 					</div>
-			</div>
+				<% end %>
+			<% end %>
 		<% end %>
-	<% end %>
+	</div>
+		
+	<div class="titulo"><h2>Mangá</h2></div>
+	<div class="produtos">
+		<% @products.each do |product| %>
+			<% if product.category=='Mangá' %>
+				<% cache ['store', Product.latest] do %>
+					<div class="item">
+						<h3><%= product.category %></h3>
+						<div class="imagem"><%= image_tag(product.image_url) %></div>
+						<h3><%= product.title %></h3>
+						<%= sanitize(product.description) %>
+							<div class="price_item">
+								<span class="price"><%= number_to_currency(product.price) %></span>
+								<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+							</div>
+					</div>
+				<% end %>
+			<% end %>
+		<% end %>
+	</div>
+	
+	<div class="titulo"><h2>Outros</h2></div>
+	<div class="produtos">
+		<% @products.each do |product| %>
+			<% if product.category=='Outros' %>
+				<% cache ['store', Product.latest] do %>
+					<div class="item">
+						<h3><%= product.category %></h3>
+						<div class="imagem"><%= image_tag(product.image_url) %></div>
+						<h3><%= product.title %></h3>
+						<%= sanitize(product.description) %>
+							<div class="price_item">
+								<span class="price"><%= number_to_currency(product.price) %></span>
+								<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+							</div>
+					</div>
+				<% end %>
+			<% end %>
+		<% end %>
+	</div>
