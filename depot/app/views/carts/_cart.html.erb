@@ -1,0 +1,24 @@
+<% unless cart.line_items.empty? %>
+	<h2>Seu carrinho</h2>
+	<table>	
+		<tr class="menu_carinho">
+			<td>Qt.</td>
+			<td>Livros</td>
+			<td>Preço unitário</td>
+			<td>Subtotal</td>
+			<td colspan="1">-</td>
+			<td colspan="1">+</td>
+		</tr>
+		<%= render(cart.line_items) %>
+		<tr class="total_line">
+			<td colspan="2"></td>
+			<td colspan="total_cell">Total</td>
+			<td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
+			<td colspan="1"></td>
+			<td colspan="1"></td>
+		</tr>
+	</table>
+
+	<%= button_to 'Empty cart', cart, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<% end %>

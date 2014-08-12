@@ -1,12 +1,38 @@
 // Place all the styles related to the Carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.carts {
+.carts, #Conteudo #Carro {
 	.item_price, .total_line {
 		text-align: right;
 	}
 	.total_line .total_cell {
 		font-weight: bold;
 		border-top: 1px solid #595;
+	}
+	h2{
+		color: #282;
+		font-size: 25px;
+		margin-left: 20px;
+		margin-top: 5px;
+	}
+	
+	input{
+		margin-left: 20px;
+		background-color: #E0EEEE;
+		margin-top:20px;
+	}
+	
+	table{
+		margin-top: 20px;
+	}
+	
+	table tr{
+		background-color:#E0EEEE;
+		color: blue;
+	}
+	
+	table tr td{
+		font-size: smaller;
+		text-align: center;
 	}
 }

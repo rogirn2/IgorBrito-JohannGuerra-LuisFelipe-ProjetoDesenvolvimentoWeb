@@ -1,35 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 Product.delete_all
-Product.create!(title: 'Programming Ruby 1.9 & 2.0',
-description:
+Product.create!(title: 'A Guerra dos Tronos - As Cronicas de Gelo e Fogo',
+  description:
 %{<p>
-Ruby is the fastest growing and most exciting dynamic language
-out there. If you need to get working programs delivered fast,
-you should add Ruby to your toolbox.
+Primeiro livro da série As Cronicas de Gelo e Fogo do autor George R.R.Martin. 
 </p>},
-image_url: 'ruby.jpg',
-price: 49.95)
-Product.create!(title: 'Programming Ruby 1.9 & 2.0',
-description:
+  image_url: 'cronicasdegeloefogo-zoom.gif',
+  price: 49.99)
+# . . .
+Product.create!(title: 'Dragonball 01',
+  description:
 %{<p>
-Ruby is the fastest growing and most exciting dynamic language
-out there. If you need to get working programs delivered fast,
-you should add Ruby to your toolbox.
+Primeira edição do mangá Dragonball do autor Akira Toriyama. 
 </p>},
-image_url: 'ruby.jpg',
-price: 49.95)
-Product.create!(title: 'Programming Ruby 1.9 & 2.0',
-description:
+  image_url: 'Dragonball.jpg',
+  price: 59.99)
+# . . .
+Product.create!(title: 'O Hobbit Edição Especial',
+  description:
 %{<p>
-Ruby is the fastest growing and most exciting dynamic language
-out there. If you need to get working programs delivered fast,
-you should add Ruby to your toolbox.
+Livro O Hobbit Edição Especial com a capa do 1° filme do autor J.R.R.Tolkien. 
 </p>},
-image_url: 'ruby.jpg',
-price: 49.95)
+  image_url: 'O_Hobbit.jpg',
+  price: 39.99)
+# . . .
+

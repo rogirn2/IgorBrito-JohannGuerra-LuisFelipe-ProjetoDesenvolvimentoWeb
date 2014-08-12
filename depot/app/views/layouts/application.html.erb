@@ -12,7 +12,7 @@
 		<%= @page_title || "Loja de Livros" %>
 	</div>
 	<div id="Menu">
-		<header>
+		<header>		
 		<nav>
 			<ul>
 				<li><%= link_to 'Loja', store_path %></li>
@@ -23,9 +23,17 @@
 		</nav>
 		</header>
 	</div>
+	
 	<div id="Conteudo">
-		<div id="main">
+		<div id="Main">
 			<%= yield %>
+		</div>
+		<div id="BarraLateral">
+			<div id="Carro">
+				<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+					<%= render @cart %>
+				<% end %>
+			</div>
 		</div>
 	</div>
 	<footer>

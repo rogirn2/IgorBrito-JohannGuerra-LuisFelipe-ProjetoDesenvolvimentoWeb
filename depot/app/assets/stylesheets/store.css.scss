@@ -3,10 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #Conteudo{
-	#main{
+	#Main{
 		h1{
 			margin-left:20px;
+			margin-top:25px;
 			border-bottom: 2px solid gray;
+			margin-right: 2px;
 		}
 		.item{
 			margin-right: 100px;
@@ -19,7 +21,20 @@
 				float: left;
 				width: 100px;
 				height: 100px;
-			}			
+			}
+		}
+		.item:last-child{
+			margin-right: 100px;
+			margin-left: 70px;
+			padding: 10px;
+			padding-bottom: 50px;
+			border-bottom: 2px solid #EEE9E9;
+				
+			.imagem{
+				float: left;
+				width: 100px;
+				height: 100px;
+			}
 		}
 		img{
 			width: 80px;

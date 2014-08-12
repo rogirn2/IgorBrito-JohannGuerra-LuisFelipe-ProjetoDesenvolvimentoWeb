@@ -10,10 +10,10 @@
 					<div class="item">
 						<div class="imagem"><%= image_tag(product.image_url) %></div>
 						<h3><%= product.title %></h3>
-						<%= sanitize(product.description) %>
+							<%= truncate(strip_tags(product.description), length: 50) %>
 							<div class="price_item">
 								<span class="price"><%= number_to_currency(product.price) %></span>
-								<%= button_to 'Adicionar ao Carrinho', line_items_path(product_id: product) %>
+								<%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %>
 							</div>
 					</div>
 				<% end %>	

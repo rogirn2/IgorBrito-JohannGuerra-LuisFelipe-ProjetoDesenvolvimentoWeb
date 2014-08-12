@@ -45,11 +45,20 @@
  }
 
 #Conteudo {
-	padding: 10px;
-	width: 1000px;
-	margin: 0px auto;
-	margin-left:140px;
-	margin-top: 15px;
+	width: 1240px;
+}
+
+#Conteudo #Main {
+	float: left;
+	width: 838px;
+	border-right: 2px solid blue;
+	min-height:260px;
+}
+
+#Conteudo #BarraLateral{
+	width: 400px;
+	float: right;
+	color: red;
 }
 
 header{
@@ -104,6 +113,7 @@ nav ul li a:visited:hover{
 }
 
 footer{
+	margin-top: 20px;
 	position: relative;
 	clear: both;
 	background-color: #E0FFFF;
@@ -111,5 +121,6 @@ footer{
 	text-align: center;
 	padding: 11px;
 	border-bottom: 2px solid #282;
-	border-top: 2px solid #282;	
+	border-top: 2px solid #282;
+	top: 10px;
 }
