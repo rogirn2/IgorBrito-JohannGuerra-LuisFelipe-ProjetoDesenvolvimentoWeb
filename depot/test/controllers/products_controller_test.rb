@@ -1,4 +1,4 @@
-require 'test_helper'
+﻿require 'test_helper'
 
 class ProductsControllerTest < ActionController::TestCase
   setup do

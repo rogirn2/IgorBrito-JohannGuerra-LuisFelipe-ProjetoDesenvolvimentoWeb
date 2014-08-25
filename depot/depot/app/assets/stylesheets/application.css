@@ -13,3 +13,103 @@
  *= require_tree .
  *= require_self
  */
+ 
+*{
+	text-decoration:none;
+	margin: 0px auto;
+	
+}
+#Logotipo {
+	clear: both;
+	background: #B0C4DE;
+	padding: 10px;
+	border-bottom: 2px solid #282;
+	font: small-caps 40px/40px "Times New Roman", serif;
+	color: #282;
+	text-align: center;
+	width: 1260px;	
+	
+	img{
+		float: left;
+	}
+}
+
+#notice {
+	 color: #000 !important;
+	 border: 2px solid red;
+	 padding: 1em;
+	 margin-bottom: 2em;
+	 background-color: #f0f0f0;
+	 font: bold smaller sans-serif;
+	 
+ }
+
+#Conteudo {
+	padding: 10px;
+	width: 1000px;
+	margin: 0px auto;
+	margin-left:140px;
+	margin-top: 15px;
+}
+
+header{
+	position: relative;
+	height: 20px;
+	display: block;
+	background-color: #E0FFFF;
+	padding: 10px;
+	border-bottom: 2px solid #282;
+	width: 1260px;
+}
+
+nav{
+	position: absolute;
+	bottom: 0px;
+	margin-left: 80px;
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav ul li{
+	float: left;
+}
+
+nav ul li a{
+	display: block;
+	width: 130px;
+	padding: 10px;
+	padding-bottom: 14px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #7A67EE;
+	text-align:center;
+	margin-right: 125px;
+}
+
+nav ul li a:hover{
+	color: white;
+	font-weight: bold;
+	height:18px;
+	background-color: #282;
+}
+
+nav ul li a:visited{
+	color: #7A67EE;
+}
+
+nav ul li a:visited:hover{
+	color: white;
+}
+
+footer{
+	position: relative;
+	clear: both;
+	background-color: #E0FFFF;
+	width: 1260px;
+	text-align: center;
+	padding: 11px;
+	border-bottom: 2px solid #282;
+	border-top: 2px solid #282;	
+}

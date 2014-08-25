@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  resources :orders
+
   resources :line_items do
     member do
       patch :reduce
@@ -12,7 +15,11 @@ Rails.application.routes.draw do
 
   get 'store/index'
 
-  resources :products
+  resources :products do
+	get :who_bought, on: :member
+  end
+  
+  get "application/relogio_digital"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

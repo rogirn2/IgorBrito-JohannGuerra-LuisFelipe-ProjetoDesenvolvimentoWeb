@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Depot</title>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>Loja de Livros</title>
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
 </head>
-<body class='<%= controller.controller_name%>'>
-
-<%= yield %>
-
+<body class="<%= controller.controller_name %>">
+	<div id="Logotipo">
+		<%= image_tag("Logo.gif") %>
+		<%= @page_title || "Loja de Livros" %>
+	</div>
+	<div id="Menu">
+		<header>
+		<nav>
+			<ul>
+				<li><%= link_to 'Loja', store_path %></li>
+				<li><%= link_to 'Produtos', products_path %></li>				
+				<li><%= link_to 'Carts', carts_path %></li>
+				<li><a href="#">Duvidas</a></li>
+			</ul>
+		</nav>
+		</header>
+	</div>
+	<div id="Conteudo">
+		<div id="main">
+			<%= yield %>
+		</div>
+	</div>
+	<footer>
+		<p>Desenvolvido por Johann,Felipe e Igor</p>
+	</footer>
 </body>
 </html>

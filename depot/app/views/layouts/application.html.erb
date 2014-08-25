@@ -17,7 +17,7 @@
 			<ul>
 				<li><%= link_to 'Loja', store_path %></li>
 				<li><%= link_to 'Produtos', products_path %></li>				
-				<li><%= link_to 'Carts', carts_path %></li>
+				<li><%= link_to 'Carts', @cart %></li>
 				<li><a href="#">Duvidas</a></li>
 			</ul>
 		</nav>
@@ -31,10 +31,32 @@
 		<div id="BarraLateral">
 			<div id="Carro">
 				<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-					<%= render @cart %>
+					<% if user_signed_in? %>
+						<%= render @cart %>
+					<% end %>
 				<% end %>
 			</div>
 		</div>
+	</div>
+	
+	<div id="relogio">
+		<script>
+		 $(document).ready(
+			 function(){
+				 setInterval(function(){
+					 $('#relogio').load('/application/relogio_digital');
+				  }, 1000);
+		  });
+		</script>
+		
+	</div>
+	<div id="logon">
+		<% if user_signed_in? %>
+			Ola <%= current_user.email %>. Deslogar?
+			<%= link_to "Sair", destroy_user_session_path, :method => :delete %>
+		<% else %>
+			<%= link_to "Cadastra-se", new_user_registration_path %> or <%= link_to "Entrar", new_user_session_path %>
+		<% end %>
 	</div>
 	<footer>
 		<p>Desenvolvido por Johann,Felipe e Igor</p>

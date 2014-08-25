@@ -1,0 +1,29 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h2>Seu carrinho</h2>
+<table>
+	<tr class="menu_carinho">
+		<td>Qt.</td>
+		<td>Livros</td>
+		<td>Preço unitário</td>
+		<td>Subtotal</td>
+	</tr>
+	<% @cart.line_items.each do |item| %>
+		<tr class="linhas_item_carrinho">
+			<td><%= item.quantity %>&times;</td>
+			<td><%= item.product.title %></td>
+			<td class="item_price"><%= number_to_currency(item.product.price) %></td>
+			<td class="item_price"><%= number_to_currency(item.total_price) %></td>
+			<td><%= button_to 'Adicionar mais um', line_items_path(product_id: item.product) %></td>
+		</tr>
+	<% end %>
+	
+	<tr class="total_line">
+		<td colspan="2"></td>
+		<td colspan="total_cell">Total</td>
+		<td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+	</tr>
+</table>
+<%= button_to 'Esvaziar carinho', @cart, method: :delete, data: { confirm: 'Are you sure?' } %>
